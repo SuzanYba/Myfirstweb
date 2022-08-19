@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Side Navigation CSS */
+.sideNav{
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    background: #0d74f5;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    
+}
+.logo{
+    display: block;
+    margin-bottom: 80px;
+}
+.logoimg{
+    width: 200px;
+    border-radius: 10px;
+    }
+.sidenavigation{
+    list-style: none;
+    position: relative;
+}
+.sidenavigation li{
+    padding: 15px 0;
+}
+.sidenavigation li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    
+    align-items: center;
+}
+.sidenavigation li a i{
+    font-size: 22px;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+.active{
+    background: #fff;
+    width: 100%;
+    height:47px;
+    position: absolute;
+    left: 0;
+    top: 1%;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 0 15px 10px rgba(255,255,255,0.4);
+    display: none;
+    transition: top 0.5s;
+}
+.sidenavigation li:hover a{
+    color: #0d74f5;
+    transition: 0.3s;
+}
+.sidenavigation li:hover ~ .active{
+    display: block;
+}
+.sidenavigation li:nth-child(2):hover ~ .active{
+    top:17.6%;
+}
+.sidenavigation li:nth-child(3):hover ~ .active{
+    top:34.2%;
+}
+
+.sidenavigation li:nth-child(4):hover ~ .active{
+    top:50.8%;
+}
+
+.sidenavigation li:nth-child(5):hover ~ .active{
+    top:67.4%;
+}
+
+.sidenavigation li:nth-child(6):hover ~ .active{
+    top:84%;
+}
+.logo-icon{
+    width:40px;
+    border-radius: 50%;
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .sideNav{
+        width: 90px;
+    }    
+    .logo-icon{
+        display: block;
+    }
+    .logoimg{
+        display: none;
+    }
+    .sidenavigation li a p{
+        display: none;
+    }
+    .sidenavigation li a i{
+        margin-left: 0;
+    }
+    .sidenavigation li a{
+        justify-content: center;
+    }
+}     
+
+/* Side Navigation CSS ends */
+
+.header{
+    width: 82.1%;
+    margin-left: 240px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box{
+    width: 50%;
+    height: 70vh;
+    background: rgba(232, 238, 226, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    margin-left: 15%;
+    top: 15vh;
+    position: fixed;
+    z-index: 2;
+    border-radius: 10px;
+    display: none;
+}
+   
+.box i{
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav{
+    position:sticky;
+    top: 0;
+}
+.navlink{
+    margin-left: 40%;
+    padding: 10px 7%;
+    text-align: right;
+    background: #0d74f5;
+    padding: 10px 30px;
+    border-bottom-left-radius: 18px;
+}
+.navigation li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+.navigation li a{
+    text-decoration: none;
+    color: #fff;
+}
+.navigation li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color:#fff;
+    margin: auto;
+    transition: 0.5s;
+}
+.navigation li:hover::after{
+    width: 50%;
+} 
+.container{
+    padding: 0 7%;
+    padding-top: 20%;
+}
+.container p{
+    color: #fff;
+}
+.container h1{
+    color: #fff;
+    font-size: 5vw;
+    font-weight: 800;
+}
+nav .fa{
+    display: none;
+}
+
+@media (max-width:600px){
+    .header{
+        margin-left: 90px;
+    }
+    .container{
+        padding-top: 40%;
+    }
+    .container h1{
+        font-size: 50px
+    }
+    .navlink ul li{
+        display: block;
+    }
+    .navlink{
+        background:#0d74f5;
+        position:fixed;
+        top:-300px;
+        right: 0;
+        width: 220px;
+        height:28vh;
+        padding-left: 0;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        opacity:0.9
+    }
+    nav .fa{
+        display: block;
+        position:absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 25px;
+        cursor:pointer;
+        color: white;
+        margin: 10px;
+    }
+        
+}
